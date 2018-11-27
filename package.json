@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "23.3.9",
-    "@types/node": "10.12.10",
-    "@types/react": "16.7.7",
-    "@types/react-dom": "16.0.10",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.10",
+    "@types/redux-actions": "^2.3.1",
+    "cuid": "^2.1.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
-    "typescript": "3.1.6"
+    "redux-actions": "^2.6.4",
+    "redux-observable": "^1.0.0",
+    "typesafe-actions": "^2.0.4",
+    "typescript": "^3.1.6",
+    "@types/react": "^16.7.7",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-redux": "^6.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

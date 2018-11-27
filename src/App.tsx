@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { add, remove, update } from './todo/actions/todo.actions';
+console.log(add('1111'), remove(1), update({ id :'', desc: 'ㅆㅆ' }));
 
 class App extends Component {
   render() {
@@ -8,8 +10,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
+          <p> 
+ 
           </p>
           <a
             className="App-link"
