@@ -1,6 +1,6 @@
 import cuid from "cuid";
 import { createAction } from "redux-actions";
-import { ToDo } from "../models/todo";
+import { Todo } from "../models/todo";
 
 
 export enum TodoActionTypes {
@@ -9,18 +9,24 @@ export enum TodoActionTypes {
     UPDATE_TODO = '[TODO] UPDATE'
 }
 
-export const add = createAction<ToDo, string>(
+export const add = createAction<Todo, string>(
     TodoActionTypes.ADD_TODO,
     (desc: string) => ({ id: cuid(), desc: desc })
 );
 
 
-export const remove = createAction(
+export const remove = createAction<unknown>(
     TodoActionTypes.REMOVE_TODO
 );
 
 
-export const update = createAction<ToDo, ToDo>(
+export const update = createAction<Todo, Todo>(
     TodoActionTypes.UPDATE_TODO,
     ({ id, desc }) => ({ id: id, desc: desc })
 );
+
+
+export type TodoActionUnionTypes = 
+ReturnType<typeof add> 
+| ReturnType<typeof remove> 
+| ReturnType<typeof update>;
